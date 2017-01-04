@@ -2,12 +2,12 @@
   "name": "shopify-codemod",
   "version": "15.1.0",
   "description": "Custom JSCodeShift transforms to help convert our rusty JavaScript.",
-  "homepage": "https://github.com/Shopify/javascript/tree/master/packages/shopify-codemod",
-  "repository": "https://github.com/Shopify/javascript/tree/master/packages/shopify-codemod",
+  "homepage": "https://github.com/Shopify/shopify-codemod",
+  "repository": "https://github.com/Shopify/shopify-codemod",
   "scripts": {
-    "test": "NODE_PATH=$NODE_PATH:./transforms:./test ../../node_modules/.bin/mocha 'test/**/*.test.js' --compilers js:babel-core/register",
+    "test": "NODE_PATH=$NODE_PATH:./transforms:./test mocha 'test/**/*.test.js' --compilers js:babel-core/register",
     "test:watch": "npm run test -- --watch --reporter min",
-    "test:cover": "NODE_PATH=$NODE_PATH:./transforms:./test ../../node_modules/.bin/babel-node ../../node_modules/.bin/isparta cover --root transforms/ --reporter text --reporter html ../../node_modules/.bin/_mocha -- --reporter spec test/**/*.test.js"
+    "test:cover": "NODE_PATH=$NODE_PATH:./transforms:./test babel-node node_modules/.bin/isparta cover --root transforms/ --report text --report html _mocha -- --reporter spec test/**/*.test.js"
   },
   "keywords": [
     "codemod"
@@ -24,19 +24,27 @@
     ]
   },
   "author": {
-    "name": "Chris Sauve",
-    "email": "chris.sauve@shopify.com"
+    "name": "Shopify",
+    "email": "dev@shopify.com"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/javascript/issues"
+    "url": "https://github.com/Shopify/shopify-codemod/issues"
   },
   "license": "MIT",
   "devDependencies": {
-    "chai-jscodeshift": "file:../chai-jscodeshift",
-    "jscodeshift": "^0.3.29"
+    "babel-cli": "6.x",
+    "babel-core": "6.x",
+    "chai": "3.x",
+    "chai-jscodeshift": "15.0.0",
+    "coveralls": "2.x",
+    "eslint-plugin-shopify": "15.1.0",
+    "isparta": "4.x",
+    "istanbul": "0.x",
+    "jscodeshift": "^0.3.29",
+    "mocha": "3.x"
   },
   "dependencies": {
     "chalk": "^1.1.3",
-    "babel-preset-shopify": "latest"
+    "babel-preset-shopify": "15.0.0"
   }
 }
