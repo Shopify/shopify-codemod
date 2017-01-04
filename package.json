@@ -5,6 +5,8 @@
   "homepage": "https://github.com/Shopify/shopify-codemod",
   "repository": "https://github.com/Shopify/shopify-codemod",
   "scripts": {
+    "check": "yarn lint && yarn test",
+    "lint": "eslint --max-warnings=0 .",
     "test": "NODE_PATH=$NODE_PATH:./transforms:./test mocha 'test/**/*.test.js' --compilers js:babel-core/register",
     "test:watch": "yarn test -- --watch --reporter min",
     "test:cover": "NODE_PATH=$NODE_PATH:./transforms:./test babel-node node_modules/.bin/isparta cover --root transforms/ --report text --report html _mocha -- --reporter spec test/**/*.test.js"
@@ -37,6 +39,7 @@
     "chai": "3.x",
     "chai-jscodeshift": "15.0.0",
     "coveralls": "2.x",
+    "eslint": "3.10.x",
     "eslint-plugin-shopify": "15.1.0",
     "isparta": "4.x",
     "istanbul": "0.4.4",
