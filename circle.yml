@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 5.7.0
+
+dependencies:
+  pre:
+    - "curl http://beyondgrep.com/ack-2.14-single-file > ~/bin/ack && chmod 0755 ~/bin/ack"
+    - npm install -g npm@3.6.0

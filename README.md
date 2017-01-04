@@ -1,5 +1,7 @@
 # shopify-codemod
 
+[![Circle CI](https://circleci.com/gh/Shopify/shopify-codemod.svg?style=svg)](https://circleci.com/gh/Shopify/shopify-codemod)
+
 This repository contains a collection of Codemods written with [JSCodeshift](https://github.com/facebook/jscodeshift) that will help update our old, crusty JavaScript to nice, clean JavaScript.
 
 ## Usage
