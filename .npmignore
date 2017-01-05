@@ -2,5 +2,6 @@
 bin/create-transform
 bin/rename-transform
 coverage
+npm-debug.log*
 test
 transform-cli
