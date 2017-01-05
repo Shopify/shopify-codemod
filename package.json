@@ -5,7 +5,7 @@
   "homepage": "https://github.com/Shopify/shopify-codemod",
   "repository": "https://github.com/Shopify/shopify-codemod",
   "scripts": {
-    "check": "yarn lint && yarn test",
+    "check": "yarn run lint && yarn test",
     "lint": "eslint --max-warnings=0 .",
     "test": "NODE_PATH=$NODE_PATH:./transforms:./test mocha 'test/**/*.test.js' --compilers js:babel-core/register",
     "test:watch": "yarn test -- --watch --reporter min",
