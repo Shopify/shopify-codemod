@@ -6,6 +6,7 @@
   "repository": "https://github.com/Shopify/shopify-codemod",
   "scripts": {
     "check": "yarn run lint && yarn test",
+    "deploy": "npm publish",
     "lint": "eslint --max-warnings=0 .",
     "test": "NODE_PATH=$NODE_PATH:./transforms:./test mocha 'test/**/*.test.js' --compilers js:babel-core/register",
     "test:watch": "yarn test -- --watch --reporter min",
